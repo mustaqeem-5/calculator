@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./src/output.css">
+</head>
+<body>
+
+    <input type="text" class="subject_inp border-2">
+    <input type="text" class="subject_inp border-2">
+    <input type="text" class="subject_inp border-2">
+    <input type="text" class="subject_inp border-2">
+    <input type="text" class="subject_inp border-2">
+
+    <button onclick="getValues()" class="border-2">Print</button>
+
+    <script>
+        function getValues() {
+            let inputs = document.querySelectorAll(".subject_inp");
+            let arr = [];
+
+            for (let i = 0; i < inputs.length; i++) {
+                arr.push(inputs[i].value);
+            }
+
+            console.log(arr);
+        }
+    </script>
+
+</body>
+</html>

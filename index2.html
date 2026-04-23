@@ -1,0 +1,417 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Calculator</title>
+</head>
+<body>
+  <input type="number" id="add1" placeholder="First number">
+  <button onclick="addNumbers()">Add</button>
+  <input type="number" id="add2" placeholder="Second number">
+  <input type="text" id="addResult" placeholder="Result" readonly>
+
+  <br><br>
+
+  <input type="number" id="sub1" placeholder="First number">
+  <button onclick="subNumbers()">Sub</button>
+  <input type="number" id="sub2" placeholder="Second number">
+  <input type="text" id="subResult" placeholder="Result" readonly>
+
+  <br><br>
+
+  <input type="number" id="multi1" placeholder="First number">
+  <button onclick="multiNumbers()">Multiply</button>
+  <input type="number" id="multi2" placeholder="Second number">
+  <input type="text" id="multiResult" placeholder="Result" readonly>
+
+  <br><br>
+
+  <input type="number" id="devide1" placeholder="First number">
+  <button onclick="devideNumbers()">Divide</button>
+  <input type="number" id="devide2" placeholder="Second number">
+  <input type="text" id="divideResult" placeholder="Result" readonly>
+
+  <script>
+    function addNumbers() {
+      let n1 = parseFloat(document.getElementById("add1").value);
+      let n2 = parseFloat(document.getElementById("add2").value);
+
+      if (isNaN(n1) || isNaN(n2)) {
+        document.getElementById("addResult").value = "Enter valid numbers";
+      } else {
+        document.getElementById("addResult").value = n1 + n2;
+      }
+    }
+
+    function subNumbers() {
+      let n1 = parseFloat(document.getElementById("sub1").value);
+      let n2 = parseFloat(document.getElementById("sub2").value);
+
+      if (isNaN(n1) || isNaN(n2)) {
+        document.getElementById("subResult").value = "Enter valid numbers";
+      } else {
+        document.getElementById("subResult").value = n1 - n2;
+      }
+    }
+
+    function multiNumbers() {
+      let n1 = parseFloat(document.getElementById("multi1").value);
+      let n2 = parseFloat(document.getElementById("multi2").value);
+
+      if (isNaN(n1) || isNaN(n2)) {
+        document.getElementById("multiResult").value = "Enter valid numbers";
+      } else {
+        document.getElementById("multiResult").value = n1 * n2;
+      }
+    }
+
+    function devideNumbers() {
+      let n1 = parseFloat(document.getElementById("devide1").value);
+      let n2 = parseFloat(document.getElementById("devide2").value);
+
+      if (isNaN(n1) || isNaN(n2)) {
+        document.getElementById("divideResult").value = "Enter valid numbers";
+      } else if (n2 === 0) {
+        document.getElementById("divideResult").value = "Cannot divide by 0";
+      } else {
+        document.getElementById("divideResult").value = n1 / n2;
+      }
+    }
+  </script>
+
+</body>
+</html> -->
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="src/output.css">
+</head>
+<body>
+    <div class="pl-10 pt-5">
+        <button onclick="bggreen()" class="border border-green-800 p-2 bg-green-700 cursor-pointer">green</button>
+        <button onclick="bgred()" class="border border-red-600 p-2 bg-red-600 cursor-pointer">red</button>
+    </div>
+
+    
+
+    <script>
+
+        function bggreen() {
+        document.body.style.backgroundColor = "green";
+        };
+
+        function bgred() {
+            document.body.style.backgroundColor = "red";
+        };
+
+        
+
+    </script>
+</body>
+</html> -->
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Simple Calculator</title>
+</head>
+<body>
+
+  <h2>Simple Calculator</h2>
+
+  <input type="number" id="num1" placeholder="Enter first number">
+  <input type="number" id="num2" placeholder="Enter second number">
+
+  <br><br>
+
+  <button onclick="calculate('+')">Add (+)</button>
+  <button onclick="calculate('-')">Subtract (-)</button>
+  <button onclick="calculate('*')">Multiply (×)</button>
+  <button onclick="calculate('/')">Divide (÷)</button>
+
+  <h3 id="result">Result: </h3>
+
+  <script>
+    function calculate(operator) {
+      let num1 = parseFloat(document.getElementById("num1").value);
+      let num2 = parseFloat(document.getElementById("num2").value);
+      let result;
+
+      if (isNaN(num1) || isNaN(num2)) {
+        result = "Please enter valid numbers";
+      } else {
+        if (operator === '+') result = num1 + num2;
+        else if (operator === '-') result = num1 - num2;
+        else if (operator === '*') result = num1 * num2;
+        else if (operator === '/') result = num2 !== 0 ? num1 / num2 : "Cannot divide by 0";
+      }
+
+      document.getElementById("result").innerText = "Result: " + result;
+    }
+  </script>
+
+</body>
+</html> -->
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Print Input</title>
+</head>
+<body>
+
+  <input type="text" id="myInput">
+  <button onclick="printText()">Print</button>
+
+  <p id="output"></p>
+
+  <script>
+    function printText() {
+      let value = document.getElementById("myInput").value;
+      document.getElementById("output").innerText = value;
+    }
+  </script>
+
+</body>
+</html> -->
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marksheet</title>
+    <link rel="stylesheet" href="src/output.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
+</head>
+
+<body class="bg-[#E4EEF8]">
+
+    <div class="p-10">
+        <div class="flex justify-between">
+            <div class="pb-2">
+                <input type="text" value="Class:XI" class="border-2 font-medium bg-[#6485A4]" >
+            </div>
+            <div class="flex pr-75">
+                <div class="border-2 w-20 h-6.5 font-medium">Roll No:</div>
+                <input type="text" class="border-2 w-20 h-6.5 font-medium text-center bg-[#6485A4]">
+            </div>
+        </div>
+
+        <div class="flex justify-between pt-2 gap-2 pb-4">
+            <div class="flex flex-col gap-1.5 ">
+                <div class="flex">
+                    <div class="border-2 font-medium w-43">Name</div>
+                    <input type="text" class="border-2 w-43 bg-[#6485A4] uppercase">
+                </div>
+
+                <div class="flex">
+                    <div class="border-2  font-medium w-43">F/Name</div>
+                    <input type="text" class="border-2 w-43 bg-[#6485A4] uppercase">
+                </div>
+            </div>
+
+            <div class="flex flex-col gap-1.5 pr-75">
+                <div class="flex">
+                    <div class="border-2  font-medium w-43">Surname</div>
+                    <input type="text" class="border-2 w-43 bg-[#6485A4] uppercase">
+                </div>
+
+                <div class="flex">
+                    <div class="border-2  font-medium w-43">DOB</div>
+                    <input type="text" class="border-2 w-43 bg-[#6485A4] uppercase">
+                </div>
+            </div>
+        </div>
+
+       <div class="border-2 p-4 w-300">
+             <h1 class="text-2xl font-medium text-center underline">MarkSheet</h1>
+
+        <div id="addnewline" class="flex flex-col gap-3 pt-4">
+            <div class="flex text-xl font-medium">
+                <span class="pl-8">Subjects</span>
+                <span class="pl-35">MinMarks</span>
+                <span class="pl-29">MaxMarks</span>
+                <span class="pl-25">ObtainMarks</span>
+            </div>
+            <div class="flex">
+                <input type="text" value="English" class="border-2 bg-[#6485A4] pl-2 font-medium w-51">
+                <input type="text" value="33" class="border-2 bg-[#6485A4] pl-2 font-medium w-51">
+                <input type="text" value="100" oninput="maxmark()" class="border-2 maxnum bg-[#6485A4] pl-2 font-medium w-51">
+                <input type="number" step="0.01" id="obt" oninput="obtMark()" class="border-2 num bg-[#6485A4] pl-2 font-medium w-51">
+                <div class="">
+                    <button onclick="addline()" class="border-2 px-2 bg-green-500 cursor-pointer ">
+                        <i class="fa-solid fa-plus"></i>
+                    </button>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="flex justify-between font-medium">
+            <div class="pt-5 ">
+                <div class="flex">
+                    <div class="border-2 font-medium w-46.5">Total Mark</div>
+                    <input type="text" id="totalmark" class="border-2 bg-[#6485A4]">
+                </div>
+
+                <div class="flex">
+                    <div class="border-2 font-medium w-46.5">Total</div>
+                    <input type="text" id="total" class="border-2 bg-[#6485A4]">
+                </div>
+
+            </div>
+            
+            <div class="pt-5 pr-10">
+                <div class="flex">
+                    <div class="border-2 font-medium w-46.5">Percentage</div>
+                    <input type="text" id="percentage" class="border-2 bg-[#6485A4]">
+                </div>
+                <div class="flex">
+                    <div class="border-2 font-medium w-46.5">Grade</div>
+                    <input type="text" id="Grade" class="border-2 bg-[#6485A4]">
+                </div>
+
+                <div class="flex">
+                    <div class="border-2 font-medium w-46.5">Remarks</div>
+                    <input type="text" id="Remarks" class="border-2 bg-[#6485A4]">
+                </div>
+
+                <div class="pt-2.5">
+                    <button onclick="window.print()" class="px-6 py-2 rounded bg-[#6485A4] cursor-pointer">
+                        Print
+                    </button>
+                </div>
+            </div>
+        </div>
+
+       </div>    
+    </div>
+
+    <script>
+        let totalmark = 0;
+        
+        function maxmark() {
+            let maxnums = document.querySelectorAll(".maxnum");
+            totalmark = 0;
+        
+            for (let m of maxnums) {
+                totalmark += Number(m.value) || 0;
+            }
+        
+            document.getElementById("totalmark").value = totalmark;
+        }
+        
+        function obtMark() {
+            let inputs = document.querySelectorAll(".num");
+            let total = 0;
+        
+            for (let i of inputs) {
+                total += Number(i.value) || 0;
+            }
+        
+            document.getElementById("total").value = total;
+            
+        
+            percentage();
+        }
+        
+        function percentage() {
+            let total = Number(document.getElementById("total").value) || 0;
+        
+            let percent = totalmark ? (total / totalmark) * 100 : 0;
+        
+            document.getElementById("percentage").value = percent.toFixed(2) + "%";
+        
+            document.getElementById("Grade").value = grade(percent);
+        
+            document.getElementById("Remarks").value = (percent >= 40) ? "Pass" : "Fail";
+        }
+        
+        function grade(percentage) {
+            if (percentage >= 80) return "A";
+            else if (percentage >= 70) return "B";
+            else if (percentage >= 60) return "C";
+            else if (percentage >= 40) return "D";
+            else return "Fail";
+        }
+        
+        function addline() {
+            let container = document.getElementById("addnewline");
+        
+            let row = document.createElement("div");
+            row.className = "flex";
+        
+            row.innerHTML = `
+                <input type="text" class="border-2 bg-[#6485A4] pl-2 w-51 font-medium">
+                <input type="text" value="33" class="border-2 bg-[#6485A4] pl-2 w-51 font-medium">
+                <input type="text" value="100" oninput="maxmark()" class="border-2 maxnum bg-[#6485A4] pl-2 w-51 font-medium">
+                <input type="number" step="0.01" oninput="obtMark()" class="border-2 num bg-[#6485A4] pl-2 w-51 font-medium">
+                <button onclick="removeLine(this)" class="border px-2 bg-red-600 cursor-pointer bg-[#6485A4]">
+                    <i class="fa-solid fa-minus"></i>
+                </button>
+            `;
+            container.appendChild(row);
+        
+            maxmark();
+        }
+        
+        function removeLine(btn) {
+            btn.parentElement.remove();
+        
+            maxmark();
+            obtMark();
+        }
+        document.addEventListener("input", function (e) {
+    if (e.target.classList.contains("num")) {
+        let value = e.target.value;
+
+        if (value.includes(".")) {
+            let parts = value.split(".");
+            parts[1] = parts[1].slice(0, 2);
+            e.target.value = parts[0] + "." + parts[1];
+        }
+    }
+});
+
+        window.onload = maxmark;
+    </script>
+
+</body>
+
+</html> -->
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calc</title>
+</head>
+<body>
+    <div>
+        <input type="text" id="val1">
+        <button onclick="op()">+</button>
+        <input type="text" id="val2">
+        <p>=</p>
+        <input type="text" id="ans">
+    </div>
+
+
+    <script>
+        function op() {
+            
+        }
+    </script>
+
+</body>
+</html> -->
